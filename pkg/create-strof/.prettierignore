@@ -1,0 +1,7 @@
+# .prettierignore of create-strof
+node_modules
+build
+dist
+tmp
+README.md
+template/*

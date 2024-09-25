@@ -1,0 +1,7 @@
+# .gitignore of create-strof
+dist/
+dist2/
+tmp/
+tmp2/
+# vitest creates node_modules for the results.json
+node_modules/

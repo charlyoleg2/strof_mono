@@ -1,0 +1,5 @@
+# .gitignore of strof_mono
+node_modules
+build
+dist
+tmp

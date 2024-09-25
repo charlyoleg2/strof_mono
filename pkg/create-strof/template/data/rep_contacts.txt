@@ -1,0 +1,7 @@
+# rep_contacts.txt
+
+an example of entry
+some details # this comment won't be display
+# this comment does not break the paragraph
+/some/hash/tags
+

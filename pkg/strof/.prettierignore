@@ -1,0 +1,6 @@
+# .prettierignore of strof
+node_modules
+build
+dist
+tmp
+README.md

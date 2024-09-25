@@ -1,0 +1,15 @@
+# rep_friends.txt
+
+jojo la casquette
+friend/bieres
+
+# comment to be ignored because between two paragraphs
+
+
+bibi fricotin
+ferme de vaches # one comment
+# another comment
+friend/hamster
+
+coco jardinier
+friend/legumes/fleurs

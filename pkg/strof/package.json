@@ -1,0 +1,87 @@
+{
+	"name": "strof",
+	"version": "0.1.0",
+	"description": "a cli-tool for quering phone-books",
+	"type": "module",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/charlyoleg2/strof_mono.git"
+	},
+	"homepage": "https://npmjs.com/package/strof",
+	"keywords": [
+		"strof",
+		"strophe",
+		"paragraph",
+		"sbook",
+		"expert system"
+	],
+	"author": "charlyoleg",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/charlyoleg2/strof_mono/issues"
+	},
+	"main": "./dist/strof.js",
+	"types": "./dist/strof.d.ts",
+	"bin": {
+		"strof": "dist/strof.js"
+	},
+	"files": [
+		"dist/",
+		"!dist/**/*.map",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"engines": {
+		"node": ">=20.10.0"
+	},
+	"tsup": {
+		"entry": [
+			"src/strof.ts"
+		],
+		"format": "esm",
+		"splitting": false,
+		"dts": true,
+		"sourcemap": true,
+		"clean": true
+	},
+	"prettier": {
+		"useTabs": true,
+		"singleQuote": true,
+		"trailingComma": "none",
+		"printWidth": 100,
+		"plugins": [],
+		"overrides": []
+	},
+	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup",
+		"check": "tsc --noEmit",
+		"pretty": "prettier --check .",
+		"format": "prettier --write .",
+		"lint": "eslint .",
+		"test:unit": "vitest",
+		"test:unit:once": "vitest --run",
+		"ci": "run-s check build pretty lint test:unit:once",
+		"clean": "shx rm -fr dist node_modules",
+		"run": "node dist/strof.js -d test/data/rep_contacts.txt -d test/data/rep_friends.txt",
+		"test": "test/test_strof.sh"
+	},
+	"dependencies": {
+		"fs-extra": "^11.2.0",
+		"yargs": "^17.7.2"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^11.0.4",
+		"@types/node": "^22.5.5",
+		"@types/yargs": "^17.0.33",
+		"eslint": "^9.11.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^3.3.3",
+		"shx": "^0.3.4",
+		"tsup": "^8.3.0",
+		"typescript": "^5.6.2",
+		"typescript-eslint": "^8.6.0",
+		"vitest": "^2.1.1"
+	}
+}

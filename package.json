@@ -1,0 +1,42 @@
+{
+	"name": "strof_mono",
+	"version": "0.1.0",
+	"description": "The monorepo of strof",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/charlyoleg2/strof_mono.git"
+	},
+	"keywords": [
+		"sbook",
+		"strof",
+		"strophe",
+		"paragraphe",
+		"expert system"
+	],
+	"author": "charlyoleg2",
+	"type": "module",
+	"workspaces": [
+		"pkg/*"
+	],
+	"scripts": {
+		"strof:ci": "npm -w strof run ci",
+		"strof:clean": "npm -w strof run clean",
+		"strof:version": "npm -w strof version patch",
+		"strof:publish": "npm -w strof publish --provenance",
+		"create-strof:ci": "npm -w create-strof run ci",
+		"create-strof:clean": "npm -w create-strof run clean",
+		"create-strof:version": "npm -w create-strof version patch",
+		"create-strof:publish": "npm -w create-strof publish --provenance",
+		"ci": "run-s strof:ci create-strof:ci",
+		"clean-root": "shx rm -fr tmp tmp2 build",
+		"clean": "run-s clean-root strof:clean create-strof:clean",
+		"versions": "run-s strof:version create-strof:version",
+		"gh-publish": "run-s strof:publish create-strof:publish",
+		"ls-workspaces": "npm -ws exec -c pwd"
+	},
+	"devDependencies": {
+		"npm-run-all": "^4.1.5",
+		"shx": "^0.3.4"
+	}
+}

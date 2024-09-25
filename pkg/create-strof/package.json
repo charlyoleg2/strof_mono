@@ -1,0 +1,97 @@
+{
+	"name": "create-strof",
+	"version": "0.1.0",
+	"description": "The npm-initializer for creating a new strof directoty or repository",
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/charlyoleg2/strof_mono.git"
+	},
+	"homepage": "https://www.npmjs.com/package/create-strof",
+	"author": "charlyoleg",
+	"license": "ISC",
+	"keywords": [
+		"strof",
+		"strophe",
+		"paragraph",
+		"sbook",
+		"expert system"
+	],
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/create-strof-api.d.ts",
+			"default": "./dist/create-strof-api.js"
+		}
+	},
+	"bin": {
+		"create-strof": "dist/create-strof-cli.js"
+	},
+	"files": [
+		"dist/create-strof-cli.js",
+		"dist/template/",
+		"!dist/**/*.map",
+		"!dist/**/*.spec.*"
+	],
+	"tsup": {
+		"entry": [
+			"src/create-strof-api.ts",
+			"src/create-strof-ref.ts",
+			"src/create-strof-cli.ts"
+		],
+		"format": "esm",
+		"splitting": false,
+		"dts": false,
+		"sourcemap": false,
+		"clean": true
+	},
+	"prettier": {
+		"useTabs": true,
+		"singleQuote": true,
+		"trailingComma": "none",
+		"printWidth": 100,
+		"plugins": [],
+		"overrides": []
+	},
+	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup",
+		"check": "tsc --noEmit",
+		"pretty": "prettier --check .",
+		"format": "prettier --write .",
+		"lint": "eslint .",
+		"test:unit": "vitest",
+		"test:unit:once": "vitest --run",
+		"copy_template": "shx cp -r template dist/",
+		"cleanCopy_template": "run-s clean:template copy_template",
+		"ci": "run-s check build pretty lint test:unit:once cleanCopy_template",
+		"run": "dist/create-strof-cli.js",
+		"run:ref": "dist/create-strof-ref.js tmp2",
+		"run:diff": "diff -rq tmp tmp2",
+		"run:check": "run-s run:ref run:diff",
+		"cycle": "run-s clean ci run",
+		"clean:template": "shx rm -fr dist/template",
+		"clean:build": "shx rm -fr dist node_modules",
+		"clean:output": "shx rm -fr tmp tmp2",
+		"clean": "run-s clean:build clean:output"
+	},
+	"dependencies": {
+		"@clack/prompts": "^0.7.0",
+		"chalk": "^5.3.0",
+		"handlebars": "^4.7.8"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.10.0",
+		"@types/eslint__js": "^8.42.3",
+		"@types/node": "^22.5.5",
+		"eslint": "^9.10.0",
+		"eslint-config-prettier": "^9.1.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^3.3.3",
+		"shx": "^0.3.4",
+		"tsup": "^8.3.0",
+		"typescript": "^5.6.2",
+		"typescript-eslint": "^8.6.0",
+		"vitest": "^2.1.1"
+	}
+}
