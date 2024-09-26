@@ -99,7 +99,7 @@ async function generate_boirlerplate(cfg1: tCfg1, preDir: string): Promise<tResp
 	console.log(`generate ${template_file_list.length} files in ${preDir}/${strofDir}/`);
 	await sleep(100);
 	const rResp: tResp = {
-		vim: `vim data/rep_constact.txt`
+		vim: `vim data/rep_contacts.txt`
 	};
 	return rResp;
 }
