@@ -72,9 +72,11 @@ Next steps:
   2: ${styl(`npm install`)}
   3: ${styl('git init && git add -A && git commit -m "Initial commit"')} (optional)
   4: ${styl(`${resp.vim}`)} (optional)
-  5: ${styl(`npm run`)}
-  6: ${styl(`npm run run -- tom ardennes`)}
-  7: ${styl(`npx strof tom ardennes`)}
+  5: ${styl(`vim strof_config.js`)} (optional)
+  6: ${styl(`./gen_strof_for_nodejs.js`)}
+  7: ${styl(`mv strof ~/bin`)}
+  8: ${styl(`strof tom ardennes`)}
+  9: ${styl(`strof tom ardennes -v champagne -a`)}
 `;
 
 console.log(lastMsg);

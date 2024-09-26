@@ -16,8 +16,11 @@ Getting started
 #cd strofDir
 npm install
 vim data/rep_contacts.txt
-npx strof -d data/rep_contacts.txt tom ardennes
-strof.sh tom ardennes
+vim strof_config.js
+./gen_strof_for_nodejs.js
+mv strof ~/bin
+#cd any/where
+strof tom ardennes
 ```
 
 
@@ -25,8 +28,20 @@ Usage
 -----
 
 ```shell
-npx strof -d data/rep_contacts.txt tom ardennes
-strof.sh tom ardennes
+strof tom ardennes
+strof tom ardennes -v champagne -a
+```
+
+
+Alternative usage
+-----------------
+
+```shell
+npx strof -d data/rep_business.txt -d data/rep_friends.txt tom ardennes
+npm run
+npm run run -- tom ardennes
+node ./strof_config.js tom ardennes
+./strof_config.js tom ardennes
 ```
 
 
