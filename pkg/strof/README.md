@@ -1,11 +1,14 @@
-README of strof
-=================
+Strof
+=====
 
 
 Presentation
 ------------
 
 *strof* is a *nodejs* package that contains the bin *strof*, a tool for quering text-files per paragraph (i.e. strophe).
+*strof* is a re-write in *javascript* of [sbook](https://github.com/charlyoleg/sbook) written in *python*.
+
+The name *strof* is the contraction of *string of* and it is pronounced like *strophe* is synonyme of *paragraphe*.
 
 
 Links

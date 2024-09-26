@@ -8,8 +8,6 @@ This mono-repo contains the following npm-packages:
 - [strof](https://www.npmjs.com/package/strof) : the CLI-tool for scanning the text-files per paragraphe (or strophe)
 - [create-strof](https://www.npmjs.com/package/create-strof) : the CLI-tool for boilerplating a new *strof directory*
 
-*strof* is a re-write in *javascript* of [sbook](https://github.com/charlyoleg/sbook) written in *python*.
-
 
 Links
 -----

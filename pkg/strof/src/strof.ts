@@ -125,7 +125,7 @@ if (Object.hasOwn(argv, 'keyWords')) {
 // final output in console
 //console.log(`\ndbg122: seltxt length: ${seltxt.length}`);
 for (let idx = 0; idx < seltxt.length; idx++) {
-	console.log(`${idx}:`);
+	console.log(`${idx + 1}:`);
 	console.log(seltxt[idx] + '\n');
 }
 console.log(`Found entries: ${seltxt.length}`);
