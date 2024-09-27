@@ -8,7 +8,11 @@ import Handlebars from 'handlebars';
 import type { tCfg1, tCfg2, tResp } from './create-strof-common';
 //import { firstLetterCapital, underline } from './create-strof-common';
 import { strofDir } from './create-strof-common';
-import { template_file_list } from './create-strof-list';
+import {
+	template_file_list,
+	template_linux_file_list,
+	template_windows_file_list
+} from './create-strof-list';
 
 async function createMissingDir(outPath: string): Promise<void> {
 	// create missing output directory
@@ -93,10 +97,24 @@ async function generate_boirlerplate(cfg1: tCfg1, preDir: string): Promise<tResp
 		windowsScript: cfg1.windowsScript
 	};
 	//console.log(`dbg102: RepoNameUnderline: ${cfg2.RepoNameUnderline}`);
+	let cnt_file = 0;
 	for (const fpath of template_file_list) {
 		await oneFile(fpath, cfg2, preDir);
+		cnt_file += 1;
 	}
-	console.log(`generate ${template_file_list.length} files in ${preDir}/${strofDir}/`);
+	if (cfg2.linuxScript) {
+		for (const fpath of template_linux_file_list) {
+			await oneFile(fpath, cfg2, preDir);
+			cnt_file += 1;
+		}
+	}
+	if (cfg2.windowsScript) {
+		for (const fpath of template_windows_file_list) {
+			await oneFile(fpath, cfg2, preDir);
+			cnt_file += 1;
+		}
+	}
+	console.log(`generate ${cnt_file} files in ${preDir}/${strofDir}/`);
 	await sleep(100);
 	const rResp: tResp = {
 		vim: `vim data/rep_contacts.txt`

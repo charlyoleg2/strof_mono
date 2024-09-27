@@ -12,5 +12,7 @@ const template_file_list = [
 	'data/rep_familly.txt',
 	'data/rep_friends.txt'
 ];
+const template_linux_file_list = ['gen_strof_for_linux_bash.js'];
+const template_windows_file_list = ['gen_strof_for_windows.js'];
 
-export { template_file_list };
+export { template_file_list, template_linux_file_list, template_windows_file_list };
