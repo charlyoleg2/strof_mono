@@ -38,7 +38,7 @@ try {
 const finalMsg = `The file ${fname} has been generated!
 next steps:
   chmod +x ${fname}
-  mv ${fname} ~/
+  mv ${fname} ~/bin/
   ${fname} tom ardennes`;
 
 //console.log('Hello from gen_strof_for_nodejs.js');

@@ -19,7 +19,7 @@ vim data/rep_contacts.txt
 vim strof_config.js
 node gen_strof_for_nodejs.js
 chmod +x strof
-mv strof ~/bin
+mv strof ~/bin/
 #cd any/where
 strof tom ardennes
 ```
