@@ -35,10 +35,17 @@ try {
 //console.log('Bye from strof');
 `;
 
-console.log('Hello from gen_strof_for_nodejs.js');
+const finalMsg = `The file ${fname} has been generated!
+next steps:
+  chmod +x ${fname}
+  mv ${fname} ~/
+  ${fname} tom ardennes`;
+
+//console.log('Hello from gen_strof_for_nodejs.js');
 try {
 	await fs.writeFile(fname, ftxt);
+	console.log(finalMsg);
 } catch (err) {
 	console.log(err);
 }
-console.log('Bye from gen_strof_for_nodejs.js');
+//console.log('Bye from gen_strof_for_nodejs.js');
