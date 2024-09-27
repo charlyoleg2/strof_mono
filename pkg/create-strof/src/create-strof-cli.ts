@@ -70,7 +70,7 @@ const lastMsg = `
 Next steps:
   1: ${styl(`cd ${strofDir}`)}
   2: ${styl(`npm install`)}
-  3: ${styl('git init && git add -A && git commit -m "Initial commit"')} (optional)
+  3: ${styl(`git init && git add -A && git commit -m "Initial commit of ${strofDir}"`)} (optional)
   4: ${styl(`${resp.vim}`)} (optional)
   5: ${styl(`vim strof_config.js`)} (optional)
   6: ${styl(`node gen_strof_for_nodejs.js`)}
