@@ -17,7 +17,7 @@ Getting started
 npm install
 vim data/rep_contacts.txt
 vim strof_config.js
-./gen_strof_for_nodejs.js
+node gen_strof_for_nodejs.js
 mv strof ~/bin
 #cd any/where
 strof tom ardennes
@@ -40,8 +40,7 @@ Alternative usage
 npx strof -d data/rep_business.txt -d data/rep_friends.txt tom ardennes
 npm run
 npm run run -- tom ardennes
-node ./strof_config.js tom ardennes
-./strof_config.js tom ardennes
+node strof_config.js tom ardennes
 ```
 
 
