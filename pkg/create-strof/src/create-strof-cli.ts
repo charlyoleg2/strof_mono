@@ -74,10 +74,10 @@ Next steps:
   4: ${styl(`${resp.vim}`)} (optional)
   5: ${styl(`vim strof_config.js`)} (optional)
   6: ${styl(`node gen_strof_for_nodejs.js`)}
-  7: ${styl(`chmod +x strof`)}
-  8: ${styl(`mv strof ~/bin/`)}
-  9: ${styl(`strof tom ardennes`)}
- 10: ${styl(`strof tom ardennes -v champagne -a`)}
+  7: ${styl(`chmod +x strof.mjs`)}
+  8: ${styl(`mv strof.mjs ~/bin/`)}
+  9: ${styl(`strof.mjs tom ardennes`)}
+ 10: ${styl(`strof.mjs tom ardennes -v champagne -a`)}
 `;
 
 console.log(lastMsg);

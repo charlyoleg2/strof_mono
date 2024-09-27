@@ -3,7 +3,7 @@
 
 import fs from 'node:fs/promises';
 
-const fname = 'strof';
+const fname = 'strof.mjs';
 
 const strofDir = import.meta.dirname;
 const ftxt = `#!/usr/bin/env node

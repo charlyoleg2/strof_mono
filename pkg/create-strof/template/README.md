@@ -18,10 +18,10 @@ npm install
 vim data/rep_contacts.txt
 vim strof_config.js
 node gen_strof_for_nodejs.js
-chmod +x strof
-mv strof ~/bin/
+chmod +x strof.mjs
+mv strof.mjs ~/bin/
 #cd any/where
-strof tom ardennes
+strof.mjs tom ardennes
 ```
 
 
