@@ -5,6 +5,6 @@
 		"run": "strof -d data/rep_contacts.txt -d data/rep_friends.txt -d data/rep_familly.txt -d data/rep_business.txt"
 	},
 	"devDependencies": {
-		"strof": "^0.1.5"
+		"strof": "^0.1.7"
 	}
 }

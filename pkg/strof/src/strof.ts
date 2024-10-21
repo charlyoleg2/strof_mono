@@ -97,12 +97,12 @@ for (const pdf of argv.directory) {
 const seltxt: string[] = [];
 if (Object.hasOwn(argv, 'keyWords')) {
 	for (let idx = 0; idx < entries.length; idx++) {
-		let selectIt = false;
+		let selectIt = true;
 		// select key-words
 		for (const kw of argv.keyWords as string[]) {
 			const regex = new RegExp(kw, 'i');
-			if (regex.test(entries[idx])) {
-				selectIt = true;
+			if (!regex.test(entries[idx])) {
+				selectIt = false;
 			}
 		}
 		// unselect grep_v
