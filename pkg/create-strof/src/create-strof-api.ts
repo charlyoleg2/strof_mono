@@ -2,7 +2,7 @@
 
 import { setTimeout as sleep } from 'node:timers/promises';
 import { readFile, writeFile, access, mkdir } from 'node:fs/promises';
-import { Buffer } from 'node:buffer';
+//import { Buffer } from 'node:buffer';
 import { dirname, extname } from 'path';
 import Handlebars from 'handlebars';
 import type { tCfg1, tCfg2, tResp } from './create-strof-common';
@@ -48,7 +48,9 @@ async function oneFile(onePath: string, cfg2: tCfg2, preDir: string): Promise<vo
 		const fileIn2 = new URL(`./template/${onePathIn}`, import.meta.url);
 		let fileBin = false;
 		let fileStr2 = '';
-		let fileBuffer2 = Buffer.alloc(0);
+		//let fileBuffer2: Buffer<ArrayBufferLike>;
+		const outPath = `${preDir}/${strofDir}/${onePathOut}`;
+		await createMissingDir(outPath);
 		try {
 			await access(fileIn1);
 			try {
@@ -66,20 +68,19 @@ async function oneFile(onePath: string, cfg2: tCfg2, preDir: string): Promise<vo
 			if (err) {
 				if (isFileBinary(fileIn2)) {
 					fileBin = true;
-					fileBuffer2 = await readFile(fileIn2);
+					const fileBuffer2 = await readFile(fileIn2);
+					await writeFile(outPath, fileBuffer2);
 				} else {
 					fileStr2 = await readFile(fileIn2, { encoding: 'utf8' });
 				}
 			}
 		}
 		//console.log(fileStr2);
-		const outPath = `${preDir}/${strofDir}/${onePathOut}`;
-		await createMissingDir(outPath);
 		// write the output file\
-		if (fileBin) {
-			await writeFile(outPath, fileBuffer2);
-		} else {
+		if (!fileBin) {
 			await writeFile(outPath, fileStr2);
+			//} else {
+			//await writeFile(outPath, fileBuffer2);
 		}
 	} catch (err) {
 		console.log(`err213: error while generating file ${onePath}`);
