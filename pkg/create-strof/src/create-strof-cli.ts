@@ -38,7 +38,7 @@ const pCfg = await prom.group(
 			}),
 		windowsScript: () =>
 			prom.confirm({
-				message: 'Do you want an helper Linux script?',
+				message: 'Do you want an helper Windows script?',
 				initialValue: false
 				//placeholder: `${projName}_vag`
 			})
