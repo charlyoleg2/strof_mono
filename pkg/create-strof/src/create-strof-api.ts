@@ -50,7 +50,6 @@ async function oneFile(onePath: string, cfg2: tCfg2, preDir: string): Promise<vo
 		let fileStr2 = '';
 		//let fileBuffer2: Buffer<ArrayBufferLike>;
 		const outPath = `${preDir}/${strofDir}/${onePathOut}`;
-		await createMissingDir(outPath);
 		try {
 			await access(fileIn1);
 			try {
@@ -69,6 +68,7 @@ async function oneFile(onePath: string, cfg2: tCfg2, preDir: string): Promise<vo
 				if (isFileBinary(fileIn2)) {
 					fileBin = true;
 					const fileBuffer2 = await readFile(fileIn2);
+					await createMissingDir(outPath);
 					await writeFile(outPath, fileBuffer2);
 				} else {
 					fileStr2 = await readFile(fileIn2, { encoding: 'utf8' });
@@ -78,6 +78,7 @@ async function oneFile(onePath: string, cfg2: tCfg2, preDir: string): Promise<vo
 		//console.log(fileStr2);
 		// write the output file\
 		if (!fileBin) {
+			await createMissingDir(outPath);
 			await writeFile(outPath, fileStr2);
 			//} else {
 			//await writeFile(outPath, fileBuffer2);
