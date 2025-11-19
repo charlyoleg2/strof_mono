@@ -1,6 +1,6 @@
 {
 	"name": "strof",
-	"version": "0.1.10",
+	"version": "0.1.11",
 	"description": "a cli-tool for quering phone-books",
 	"type": "module",
 	"private": false,
