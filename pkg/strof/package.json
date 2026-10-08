@@ -68,20 +68,20 @@
 		"test": "test/test_strof.sh"
 	},
 	"dependencies": {
-		"fs-extra": "^11.3.3",
-		"yargs": "^18.0.0"
+		"fs-extra": "^11.4.1",
+		"yargs": "^18.2.0"
 	},
 	"devDependencies": {
 		"@types/fs-extra": "^11.0.4",
-		"@types/node": "^25.0.3",
+		"@types/node": "^25.9.9",
 		"@types/yargs": "^17.0.35",
-		"eslint": "^9.39.2",
+		"eslint": "^9.39.5",
 		"npm-run-all2": "^8.0.4",
-		"prettier": "^3.7.4",
+		"prettier": "^3.9.9",
 		"shx": "^0.4.0",
 		"tsup": "^8.5.1",
 		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.50.1",
-		"vitest": "^4.0.16"
+		"typescript-eslint": "^8.71.1",
+		"vitest": "^4.1.11"
 	}
 }
