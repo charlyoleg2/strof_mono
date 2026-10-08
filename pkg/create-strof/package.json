@@ -1,6 +1,6 @@
 {
 	"name": "create-strof",
-	"version": "0.1.16",
+	"version": "0.1.17",
 	"description": "The npm-initializer for creating a new strof directoty or repository",
 	"private": false,
 	"repository": {
