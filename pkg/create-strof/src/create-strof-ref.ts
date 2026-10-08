@@ -2,10 +2,10 @@
 // create-strof-ref.ts
 
 import { setTimeout as sleep } from 'node:timers/promises';
-import { generate_boirlerplate } from './create-strof-api';
-//import type { tCfg1, tResp } from './create-strof-common';
-import type { tCfg1 } from './create-strof-common';
-//import { firstLetterCapital, prefixOutputPath } from './create-strof-common';
+import { generate_boirlerplate } from './create-strof-api.ts';
+//import type { tCfg1, tResp } from './create-strof-common.ts';
+import type { tCfg1 } from './create-strof-common.ts';
+//import { firstLetterCapital, prefixOutputPath } from './create-strof-common.ts';
 
 // get optional preDir from command-line
 const preDir = process.argv[2] || 'tmp2';

@@ -5,14 +5,14 @@ import { readFile, writeFile, access, mkdir } from 'node:fs/promises';
 //import { Buffer } from 'node:buffer';
 import { dirname, extname } from 'path';
 import Handlebars from 'handlebars';
-import type { tCfg1, tCfg2, tResp } from './create-strof-common';
-//import { firstLetterCapital, underline } from './create-strof-common';
-import { strofDir } from './create-strof-common';
+import type { tCfg1, tCfg2, tResp } from './create-strof-common.ts';
+//import { firstLetterCapital, underline } from './create-strof-common.ts';
+import { strofDir } from './create-strof-common.ts';
 import {
 	template_file_list,
 	template_linux_file_list,
 	template_windows_file_list
-} from './create-strof-list';
+} from './create-strof-list.ts';
 
 async function createMissingDir(outPath: string): Promise<void> {
 	// create missing output directory

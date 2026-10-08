@@ -1,11 +1,12 @@
 {
 	"compilerOptions": {
+		"rewriteRelativeImportExtensions": true,
 		"target": "esnext",
-		"module": "esnext",
+		"module": "NodeNext",
 		"outDir": "./build",
-		"esModuleInterop": true,
+		"types": ["node"],
 		"resolveJsonModule": true,
-		"moduleResolution": "bundler",
+		"moduleResolution": "NodeNext",
 		"declaration": true,
 		"skipLibCheck": true,
 		"sourceMap": true,

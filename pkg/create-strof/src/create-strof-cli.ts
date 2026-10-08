@@ -3,12 +3,12 @@
 
 import * as prom from '@clack/prompts';
 import chalk from 'chalk';
-import packag from '../package.json';
+import packag from '../package.json' with { type: 'json' };
 import { setTimeout as sleep } from 'node:timers/promises';
-import { generate_boirlerplate } from './create-strof-api';
-//import type { tCfg1, tResp } from './create-strof-common';
-import type { tCfg1 } from './create-strof-common';
-import { prefixOutputPath, strofDir } from './create-strof-common';
+import { generate_boirlerplate } from './create-strof-api.ts';
+//import type { tCfg1, tResp } from './create-strof-common.ts';
+import type { tCfg1 } from './create-strof-common.ts';
+import { prefixOutputPath, strofDir } from './create-strof-common.ts';
 
 // first message
 const firstMsg =
